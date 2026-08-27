@@ -1,0 +1,121 @@
+:root {
+  --bg: #c8c8c8;
+  --white: #ffffff;
+  --ink: #141414;
+  --muted: #3a3a3a;
+  --line: rgba(20, 20, 20, 0.28);
+  --safe-top: var(--tg-safe-area-inset-top, 0px);
+  --safe-bottom: var(--tg-safe-area-inset-bottom, 0px);
+  --content-top: var(--tg-content-safe-area-inset-top, 0px);
+  --content-bottom: var(--tg-content-safe-area-inset-bottom, 0px);
+  --vh: var(--tg-viewport-stable-height, 100dvh);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  min-height: var(--vh);
+  height: var(--vh);
+  overflow: hidden;
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+}
+
+.wallpaper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url("./wallpaper.jpg") center / cover no-repeat;
+  filter: grayscale(1);
+}
+
+.app {
+  position: relative;
+  z-index: 1;
+  max-width: 420px;
+  min-height: var(--vh);
+  height: var(--vh);
+  margin: 0 auto;
+  padding: calc(28px + var(--safe-top) + var(--content-top)) 18px calc(32px + var(--safe-bottom) + var(--content-bottom));
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  letter-spacing: 0.28em;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+h1 {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+  font-size: 34px;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+
+.screen {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.screen.hidden,
+.hidden {
+  display: none !important;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.btn {
+  appearance: none;
+  background: var(--white);
+  color: #111;
+  border: 0;
+  border-radius: 14px;
+  min-height: 54px;
+  padding: 14px 12px;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+}
+
+.btn:active {
+  transform: scale(0.98);
+  background: #ececec;
+}
+
+.btn-ghost {
+  width: 100%;
+  margin-top: 12px;
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  box-shadow: none;
+}
+
+.btn-ghost:active {
+  background: #ffffff;
+}
