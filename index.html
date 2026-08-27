@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>GOLDSHOP</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="wallpaper" aria-hidden="true"></div>
+  <div class="app">
+    <header class="header">
+      <p class="eyebrow">GOLDSHOP</p>
+      <h1 id="page-title">Меню</h1>
+    </header>
+
+    <section id="screen-menu" class="screen">
+      <div class="grid">
+        <button class="btn" data-action="assortment">Ассортимент</button>
+        <button class="btn" data-action="sell">Продать</button>
+        <button class="btn" data-action="referral">Реферал</button>
+        <button class="btn" data-action="profile">Профиль</button>
+        <button class="btn" data-action="reviews">Отзывы</button>
+        <button class="btn" data-action="support">Поддержка</button>
+        <button class="btn" data-action="faq">FAQ</button>
+        <button class="btn hidden" id="admin-btn" data-action="admin">Админ</button>
+      </div>
+    </section>
+
+    <section id="screen-assortment" class="screen hidden">
+      <div class="grid">
+        <button class="btn" data-action="gold">Голда</button>
+        <button class="btn" data-action="us">US</button>
+        <button class="btn" data-action="gems">Гемы</button>
+        <button class="btn" data-action="bc">BC</button>
+      </div>
+      <button class="btn btn-ghost" id="back-btn" type="button">Назад</button>
+    </section>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
